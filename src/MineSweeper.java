@@ -7,7 +7,7 @@ public class MineSweeper<MineSweeperRules> {
     int countOfMineMine;
     int gameArea;
 
-    public MineSweeperArea(int row, int col) {
+    public void MineSweeperArea(int row, int col) {
         this.row = row;
         this.col = col;
         this.countOfMineMine = (row * col) / 4;
@@ -21,17 +21,18 @@ public class MineSweeper<MineSweeperRules> {
 
     }
 
-    public MineSweeperRules() {
+    public void MineSweeperRules() {
 
         for (int i = 0; i < this.row; i++) {
             for (int j = 0; j < this.col; j++) {
                 this.gameArea[i][j] = "-";
 
-
+                return;
             }
         }
 
     }
+
     public void minedMap() {
         int locationMine = 0;
 
@@ -39,14 +40,14 @@ public class MineSweeper<MineSweeperRules> {
             int mineRow = (int) (Math.random() * this.row);
             int mineCol = (int) (Math.random() * this.col);
 
-            if (this.minedMap();[mineRow][mineCol] != ("*")) {
-                countOfMineMine();[mineRow][mineCol] = "*";
+            if (this.minedMap()[mineRow][mineCol] != ("*")) {
+                countOfMineMine()[mineRow][mineCol] = "*";
                 locationMine++;
 
+            }
+
+        }
+
+
+    }
 }
-
-
-
-
-
-
